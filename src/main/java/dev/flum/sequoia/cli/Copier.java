@@ -43,7 +43,7 @@ public class Copier {
 
             InputStream i = Copier.class.getResourceAsStream("/new-site.zip");
 
-            System.setProperty("org.slf4j.simpleLogger.defaultLogLevel", "debug");
+            // System.setProperty("org.slf4j.simpleLogger.defaultLogLevel", "debug");
             ZipUtil.unpack(i, new File(location));
 
             i.close();

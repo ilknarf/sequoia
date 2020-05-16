@@ -27,8 +27,8 @@ public class Cli implements Callable<Integer> {
     public Integer call() {
         if (command.equals("build")) {
             try {
-                String userDir;
-                SiteGenerator.generate((userDir = System.getProperty("user.dir")),
+                String userDir = System.getProperty("user.dir");
+                SiteGenerator.generate(Paths.get(userDir, "theme").toString(),
                         destination, Paths.get(userDir, "source.yml").toString());
             } catch(Exception e) {
                 System.err.println(e + "\nCheck if in project root or project structure corrupted");
