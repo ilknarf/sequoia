@@ -1,0 +1,11 @@
+Home:
+  url: /
+  type: page
+  content: Hello
+
+About:
+  url: /about
+  type: page
+  content:
+    body1: Maybe
+    body2: Not

@@ -1,0 +1,16 @@
+Home:
+  type: base
+  url: /
+  content:
+    pages:
+      type: navbar
+    line1: Hi guys! How are you? This is an example!
+    line2: this is another line!
+
+About:
+  type: base
+  url: /about
+  content:
+    pages:
+      type: navbar
+    line1: Not much about me!
