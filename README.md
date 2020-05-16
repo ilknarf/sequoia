@@ -18,3 +18,6 @@ Each base layer uses the base template, and subtemplates
 can be introduced by creating a subtree in YAML with a type: <TYPE>
 property. Besides `name`, `key`, and `url`, other key names
 are vestigial, for now.
+
+Make sure to put quotes around numbers and booleans (including `yes` and `no`),
+since Sequoia only supports Strings for now.
