@@ -39,6 +39,7 @@ public class Copier {
             throw new FileSystemException(location + " is a file, not a directory");
         }
 
+        // It is easier to get resource from inside jar as a zipped archive.
         try {
 
             InputStream i = Copier.class.getResourceAsStream("/new-site.zip");
