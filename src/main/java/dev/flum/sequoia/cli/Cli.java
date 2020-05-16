@@ -17,11 +17,11 @@ import java.util.concurrent.Callable;
         "sequoia command line")
 public class Cli implements Callable<Integer> {
 
-    @Option (names = {"new"}, description = "generate new sequoia skeleton")
-    String command = "build";
+    @Parameters (index = "0", description = "new or build")
+    String command;
 
-    @Parameters(index = "0", description = "directory to copy project seed")
-    String destination = "public";
+    @Parameters(index = "1", description = "directory to copy project seed", defaultValue = ".")
+    String destination;
 
     @Override
     public Integer call() {
@@ -37,6 +37,7 @@ public class Cli implements Callable<Integer> {
             try {
                 Copier.Copy(destination);
             } catch (Exception e) {
+                e.printStackTrace();
                 System.err.println(e + "\nUnable to copy project");
             }
         } else {
